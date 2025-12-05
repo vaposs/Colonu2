@@ -21,8 +21,9 @@ public class Scaner : MonoBehaviour
 
         for (int i = 0; i < _hits.Length; i++)
         {
-            if(_hits[i].TryGetComponent(out Resours resours) && queueResours.Contains(resours) == false)
+            if(_hits[i].TryGetComponent(out Resours resours) && queueResours.Contains(resours) == false && resours.IsScan == false)
             {
+                resours.GetInPool();
                 queueResours.Enqueue(resours);
             }
         }

@@ -4,10 +4,27 @@ using UnityEngine.UI;
 
 public class ShowCounter : MonoBehaviour
 {
-    [SerializeField] private Text _counter;
+    [SerializeField] private Text _countMoney;
 
-    public void Print(int count)
+    private Counter _counter;
+
+    private void Awake()
     {
-        _counter.text = Convert.ToString(count);
+        _counter = GetComponent<Counter>();
+    }
+
+    private void OnEnable()
+    {
+        _counter.AddResource += Print;
+    }
+
+    private void OnDisable()
+    {
+        _counter.AddResource -= Print;
+    }
+
+    private void Print(int count)
+    {
+        _countMoney.text = Convert.ToString(count);
     }
 }

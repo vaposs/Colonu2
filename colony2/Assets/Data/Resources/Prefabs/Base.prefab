@@ -136,7 +136,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2255169100153901614}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 1, z: 3}
   m_ConstrainProportionsScale: 0
@@ -331,7 +331,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Counter
   _uploadPlace: {fileID: 3580623334856338702}
-  _showCounter: {fileID: 565002552821999997}
 --- !u!114 &565002552821999997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -344,7 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d9456bde4baa4cd7b4591a9c6b8bdf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShowCounter
-  _counter: {fileID: 8175735541201985093}
+  _countMoney: {fileID: 8175735541201985093}
 --- !u!1 &2370327935533899541
 GameObject:
   m_ObjectHideFlags: 0

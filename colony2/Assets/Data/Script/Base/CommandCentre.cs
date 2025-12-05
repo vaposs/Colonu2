@@ -84,14 +84,18 @@ public class CommandCentre : MonoBehaviour
 
     private void SendDrone(DronMover dron, Transform resours)
     {
-        dron.TryGetComponent(out DronLoadUnloadCargo dronLoadUnloadCargo);
-        dronLoadUnloadCargo.TakeCommand(resours);
+        if (dron.TryGetComponent(out DronLoadUnloadCargo dronLoadUnloadCargo))
+        {
+            dronLoadUnloadCargo.TakeCommand(resours);
+        }
     }
 
     private void CreateNewBaseCommasd(DronMover dron, Transform newBasePosition)
     {
-        dron.TryGetComponent(out DronLoadUnloadCargo dronLoadUnloadCargo);
-        dronLoadUnloadCargo.TakeCommand(newBasePosition);
+        if (dron.TryGetComponent(out DronLoadUnloadCargo dronLoadUnloadCargo))
+        {
+            dronLoadUnloadCargo.TakeCommand(newBasePosition);
+        }
     }
 
     private void Scaning()

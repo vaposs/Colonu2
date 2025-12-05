@@ -5,10 +5,10 @@ using System.Collections.Generic;
 public class Counter : MonoBehaviour
 {
     public event Action CreatedNewDron;
+    public event Action<int> AddResource;
     public event Action<Transform> CreatedNewBase;
 
     [SerializeField] private UploadPlace _uploadPlace;
-    [SerializeField] private ShowCounter _showCounter;
 
     private int _countResours = 0;
     private int _countCostDrone = 3;
@@ -47,7 +47,7 @@ public class Counter : MonoBehaviour
             _countResours -= _countCostBase;
         }
 
-        _showCounter.Print(_countResours);
+        AddResource?.Invoke(_countResours);
     }
 
     public void TakePositionNewBase(Transform position)
