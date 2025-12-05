@@ -1045,8 +1045,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6015606264919512390, guid: 14ba7cbb5e2b64e46a5e95d07e033766, type: 3}
-      propertyPath: _maskScan.m_Bits
-      value: 1
+      propertyPath: _scanRadiys
+      value: 47.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
